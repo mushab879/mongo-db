@@ -9,14 +9,11 @@ db.books.insertMany([
 ])
 
 3. Read Documents
-
 Get all books:
-
 db.books.find()
 
 
 Find by author:
-
 db.books.find({ author: "Author A" })
 
 4. Update Document
