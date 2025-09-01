@@ -1,0 +1,29 @@
+1. Create Database
+use libraryDB
+
+2. Create Collection
+db.books.insertMany([
+  { title: "Book One", author: "Author A", year: 2020 },
+  { title: "Book Two", author: "Author B", year: 2021 },
+  { title: "Book Three", author: "Author A", year: 2022 }
+])
+
+3. Read Documents
+
+Get all books:
+
+db.books.find()
+
+
+Find by author:
+
+db.books.find({ author: "Author A" })
+
+4. Update Document
+db.books.updateOne(
+  { title: "Book One" },
+  { $set: { year: 2023 } }
+)
+
+5. Delete Document
+db.books.deleteOne({ title: "Book Two" })
